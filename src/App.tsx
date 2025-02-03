@@ -1,15 +1,11 @@
-// import { useState } from "react";
+import Game from "./components/game";
 
-function App() {
-  // const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <div className="bg-red-500 h-[100vh]">
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="App">
+      <Game />
     </div>
   );
-}
+};
 
 export default App;
