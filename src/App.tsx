@@ -1,10 +1,13 @@
 import Game from "./components/game";
+import ColorContextProvider from "./context/color-context-provider";
 
 const App = () => {
   return (
-    <div className="App">
-      <Game />
-    </div>
+    <ColorContextProvider>
+      <div className="App">
+        <Game />
+      </div>
+    </ColorContextProvider>
   );
 };
 

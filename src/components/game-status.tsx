@@ -1,10 +1,27 @@
+import { useColor } from "../hooks/use-color-hooks";
+
 const GameStatus = () => {
+  const { state } = useColor();
   return (
     <div
       data-testid="gameStatus"
-      className="text-xl font-semibold text-center mb-6 h-8"
+      // TODO: Dynamically update color of the status message
+      // border should be gray and background should be a destructive color if the status is wrong and a success color if the status is correct with a whitish text color
+      className="text-xl border-2 border-gray-300 w-fit mx-auto px-7 py-4 flex items-center justify-center rounded-xl text-white font-semibold text-center mb-6 h-8"
+      style={{
+        backgroundColor:
+          state.status === "correct"
+            ? "green"
+            : state.status === "wrong"
+            ? "red"
+            : "gray",
+      }}
     >
-      {/* Status message will be displayed here */}
+      {state.status === "idle"
+        ? "Pick a color"
+        : state.status === "correct"
+        ? "CORRECT"
+        : "WRONG"}
     </div>
   );
 };

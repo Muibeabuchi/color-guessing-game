@@ -1,4 +1,4 @@
-const colors = {
+const colorsData = {
   alizarin: "#e74c3c",
   amaranth: "#e52b50",
   amber: "#ffbf00",
@@ -134,6 +134,7 @@ const colors = {
   wheat: "#f5deb3",
   white: "#ffffff",
   yellow: "#ffff00",
-};
+} as const;
 
+const colors = Object.values(colorsData);
 export default colors;
