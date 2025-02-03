@@ -9,7 +9,7 @@ const ColorOptions = () => {
     dispatch({ type: "selectColor", payload });
     setTimeout(() => {
       dispatch({ type: "resetStatus" });
-    }, 600);
+    }, 1000);
   };
   return (
     <div className="grid grid-cols-3 gap-4 mb-6">
