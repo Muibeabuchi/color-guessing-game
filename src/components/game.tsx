@@ -14,8 +14,8 @@ const Game = () => {
         </h1>
         <ColorBox />
         <GameInstructions />
-        <ColorOptions />
         <GameStatus />
+        <ColorOptions />
         <Score />
         <NewGameButton />
       </div>
